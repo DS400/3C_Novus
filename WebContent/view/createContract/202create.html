@@ -84,7 +84,7 @@
 	<header
 		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
 		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6"
-			href="101index.html">Novus name</a>
+			href="../top/101index.html">Novus name</a>
 		<button class="navbar-toggler position-absolute d-md-none collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
@@ -121,11 +121,11 @@
 							href="101index.html"> <span data-feather="home"
 								class="align-text-bottom"></span> Top
 						</a></li>
-						<li class="nav-item"><a class="nav-link"
+						<li class="nav-item"><a class="nav-link active"
 							href="../createContract/201index.html"> <span
 								data-feather="file" class="align-text-bottom"></span> 新規契約
 						</a></li>
-						<li class="nav-item"><a class="nav-link active"
+						<li class="nav-item"><a class="nav-link"
 							href="../settleContract/301index.html"> <span
 								data-feather="shopping-cart" class="align-text-bottom"></span>
 								計上
@@ -145,258 +145,194 @@
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div
 					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">【新規】契約条件・補償</h1>
+					<h1 class="h2">【新規】契約条件</h1>
 				</div>
 				<div class="container-fluid">
 					<button type="button" class="btn btn-primary"
-						onclick="location.href='301index.html'">トップへ戻る</button>
+						onclick="location.href='../top/101index.html'">トップへ戻る</button>
 				</div>
 
 				<main class="p-3">
 					<form class="row g-3 needs-validation" novalidate>
-						<ul class="nav nav-tabs">
-							<li class="nav-item"><a href="#tabpage1"
-								class="nav-link active" data-bs-toggle="tab">契約条件</a></li>
-							<li class="nav-item"><a href="#tabpage2" class="nav-link"
-								data-bs-toggle="tab">補償</a></li>
-						</ul>
-						<div class="tab-content">
-							<div id="tabpage1" class="tab-pane active">
-								<table class="table">
-									<tbody>
-									<thead>
-										<tr>
-											<th scope="col">契約始期</th>
-											<td><input class="form-control" id="" type="date"></td>
-										</tr>
-										<tr>
-											<th scope="col">契約満期</th>
-											<td><input class="form-control" id="" type="date"></td>
-										</tr>
-										<tr>
-											<th scope="col">被保険者の個人法人区分</th>
-											<td>
-												<div class="col-md-6">
-													<div class="form-check form-check-inline">
-														<input checked class="form-check-input"
-															id="flexRadioDefault1" name="insured_kbn"
-															onclick='showPersonalInfoBar()' type="radio"> <label
-															class="form-check-label" for="flexRadioDefault1">
-															個人 </label>
-													</div>
-													<div class="form-check form-check-inline">
-														<input class="form-check-input" id="flexRadioDefault2"
-															name="insured_kbn" onclick='hidePersonalInfoBar()'
-															type="radio"> <label class="form-check-label"
-															for="flexRadioDefault2"> 法人 </label>
-													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th scope="col">氏名-カナ</th>
-											<td>
-												<div class='row'>
-													<div class="col-auto">
-														<input class="form-control" id="" placeholder='タカハシ'
-															type="text">
-													</div>
-													<div class='col-auto'>
-														<input class="form-control" id="" placeholder='タロウ'
-															type="text">
-													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th scope="col">氏名-漢字</th>
-											<td>
-												<div class='row'>
-													<div class="col-auto">
-														<input class="form-control" id="" placeholder='髙橋'
-															type="text">
-													</div>
-													<div class='col-auto'>
-														<input class="form-control" id="" placeholder='太郎'
-															type="text">
-													</div>
-												</div>
-											</td>
-										</tr>
-										<div id='personal_information'>
-										<tr>
-											<th scope="col">生年月日</th>
-											<td><input class="form-control" id="birthDate"
-												type="date"></td>
-										</tr>
-										<tr>
-											<th scope="col">性別</th>
-											<td>
-												<div class="col-md-6">
-													<div class="form-check form-check-inline">
-														<input checked class="form-check-input" id="gender1"
-															name="gender" type="radio"> <label
-															class="form-check-label" for="gender1"> 男 </label>
-													</div>
-													<div class="form-check form-check-inline">
-														<input class="form-check-input" id="gender2" name="gender"
-															type="radio"> <label class="form-check-label"
-															for="gender2"> 女 </label>
-													</div>
-												</div>
-											</td>
-										</tr>
+						<table class="table">
+							<tbody>
+							<thead>
+								<tr>
+									<th scope="col">契約始期</th>
+									<td><input class="form-control" id="" type="date"></td>
+								</tr>
+								<tr>
+									<th scope="col">契約満期</th>
+									<td><input class="form-control" id="" type="date"></td>
+								</tr>
+								<tr>
+									<th scope="col">被保険者の個人法人区分</th>
+									<td>
+										<div class="col-md-6">
+											<div class="form-check form-check-inline">
+												<input checked class="form-check-input"
+													id="flexRadioDefault1" name="insured_kbn"
+													onclick='showPersonalInfoBar()' type="radio"> <label
+													class="form-check-label" for="flexRadioDefault1">
+													個人 </label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" id="flexRadioDefault2"
+													name="insured_kbn" onclick='hidePersonalInfoBar()'
+													type="radio"> <label class="form-check-label"
+													for="flexRadioDefault2"> 法人 </label>
+											</div>
 										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col">氏名-カナ</th>
+									<td>
+										<div class='row'>
+											<div class="col-auto">
+												<input class="form-control" id="" placeholder='タカハシ'
+													type="text">
+											</div>
+											<div class='col-auto'>
+												<input class="form-control" id="" placeholder='タロウ'
+													type="text">
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col">氏名-漢字</th>
+									<td>
+										<div class='row'>
+											<div class="col-auto">
+												<input class="form-control" id="" placeholder='髙橋'
+													type="text">
+											</div>
+											<div class='col-auto'>
+												<input class="form-control" id="" placeholder='太郎'
+													type="text">
+											</div>
+										</div>
+									</td>
+								</tr>
+								<div id='personal_information'>
+								<tr>
+									<th scope="col">生年月日</th>
+									<td><input class="form-control" id="birthDate" type="date"></td>
+								</tr>
+								<tr>
+									<th scope="col">性別</th>
+									<td>
+										<div class="col-md-6">
+											<div class="form-check form-check-inline">
+												<input checked class="form-check-input" id="gender1"
+													name="gender" type="radio"> <label
+													class="form-check-label" for="gender1"> 男 </label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" id="gender2" name="gender"
+													type="radio"> <label class="form-check-label"
+													for="gender2"> 女 </label>
+											</div>
+										</div>
+									</td>
+								</tr>
+								</div>
 
-										<tr>
-											<th scope="col">郵便番号</th>
-											<td><input class="form-control" id=""
-												placeholder='000-1234' type="text"></td>
-										</tr>
-										<tr>
-											<th scope="col">住所-カナ</th>
-											<td>
-												<div class='row'>
-													<div class="col-auto">
-														<input class="form-control" id=""
-															placeholder='トウキョウトタマシツルマキ' type="text">
-													</div>
-													<div class='col-auto'>
-														<input class="form-control" id="" placeholder='１－１－１　○○ビル'
-															type="text">
-													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th scope="col">住所-漢字</th>
-											<td>
-												<div class='row'>
-													<div class="col-auto">
-														<input class="form-control" id="" placeholder='東京都多摩市鶴牧'
-															type="text">
-													</div>
-													<div class='col-auto'>
-														<input class="form-control" id="" placeholder='１－１－１　○○ビル'
-															type="text">
-													</div>
-												</div>
-											</td>
-										</tr>
-										<th scope="col">電話番号</th>
-										<td><input class="form-control" id=""
-											placeholder='011-000-0000' type="text"></td>
-										</tr>
-										<tr>
-											<th scope="col">携帯電話番号</th>
-											<td><input class="form-control" id=""
-												placeholder='080-0000-0000' type="text"></td>
-										</tr>
-										<tr>
-											<th scope="col">FAX番号</th>
-											<td><input class="form-control" id=""
-												placeholder='000-000-0000' type="text"></td>
-										</tr>
-										<tr>
-											<th scope="col">振込方法</th>
-											<td>
-												<div class="col-md-6">
-													<div class="form-check form-check-inline">
-														<input checked class="form-check-input" id="direct"
-															name="payment_method" type="radio"> <label
-															class="form-check-label" for="direct"> 直接集金 </label>
-													</div>
-													<div class="form-check form-check-inline">
-														<input class="form-check-input" id="transfer"
-															name="payment_method" type="radio"> <label
-															class="form-check-label" for="transfer"> 口座振替 </label>
-													</div>
-													<div class="form-check form-check-inline">
-														<input class="form-check-input" id="credit"
-															name="payment_method" type="radio"> <label
-															class="form-check-label" for="credit"> クレジットカード </label>
-													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th scope="col">払込回数</th>
-											<td><select aria-label="Default select example"
-												class="form-select">
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													<option value="6">6</option>
-													<option value="12">12</option>
-											</select></td>
-										</tr>
-									</thead>
-								</table>
-							</div>
-							<div id="tabpage2" class="tab-pane">
-								<table class="table">
-									<tr>
-										<td>保険料</td>
-										<td>100,000円</td>
-									</tr>
-									<tr>
-										<td>メーカー</td>
-										<td>TOYOTA</td>
-									</tr>
-									<tr>
-										<td>車名</td>
-										<td>キューブ</td>
-									</tr>
-									<tr>
-										<td>車のナンバー</td>
-										<td>多摩 い 12-34</td>
-									</tr>
-									<tr>
-										<td>車両保険金額</td>
-										<td>300,000円</td>
-									</tr>
-									<tr>
-										<td>免許証の色</td>
-										<td>ブルー</td>
-									</tr>
-									<tr>
-										<td>車両料率</td>
-										<td>5</td>
-									</tr>
-									<tr>
-										<td>対人料率</td>
-										<td>4</td>
-									</tr>
-									<tr>
-										<td>対物料率</td>
-										<td>3</td>
-									</tr>
-									<tr>
-										<td>障害両立</td>
-										<td>2</td>
-									</tr>
-									<tr>
-										<td>年齢条件</td>
-										<td>無制限</td>
-									</tr>
-									<tr>
-										<td>一回分保険料</td>
-										<td>10,000円</td>
-									</tr>
-								</table>
+								<tr>
+									<th scope="col">郵便番号</th>
+									<td><input class="form-control" id=""
+										placeholder='000-1234' type="text"></td>
+								</tr>
+								<tr>
+									<th scope="col">住所-カナ</th>
+									<td>
+										<div class='row'>
+											<div class="col-auto">
+												<input class="form-control" id=""
+													placeholder='トウキョウトタマシツルマキ' type="text">
+											</div>
+											<div class='col-auto'>
+												<input class="form-control" id="" placeholder='１－１－１　○○ビル'
+													type="text">
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col">住所-漢字</th>
+									<td>
+										<div class='row'>
+											<div class="col-auto">
+												<input class="form-control" id="" placeholder='東京都多摩市鶴牧'
+													type="text">
+											</div>
+											<div class='col-auto'>
+												<input class="form-control" id="" placeholder='１－１－１　○○ビル'
+													type="text">
+											</div>
+										</div>
+									</td>
+								</tr>
+								<th scope="col">電話番号</th>
+								<td><input class="form-control" id=""
+									placeholder='011-000-0000' type="text"></td>
+								</tr>
+								<tr>
+									<th scope="col">携帯電話番号</th>
+									<td><input class="form-control" id=""
+										placeholder='080-0000-0000' type="text"></td>
+								</tr>
+								<tr>
+									<th scope="col">FAX番号</th>
+									<td><input class="form-control" id=""
+										placeholder='000-000-0000' type="text"></td>
+								</tr>
+								<tr>
+									<th scope="col">振込方法</th>
+									<td>
+										<div class="col-md-6">
+											<div class="form-check form-check-inline">
+												<input checked class="form-check-input" id="direct"
+													name="payment_method" type="radio"> <label
+													class="form-check-label" for="direct"> 直接集金 </label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" id="transfer"
+													name="payment_method" type="radio"> <label
+													class="form-check-label" for="transfer"> 口座振替 </label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" id="credit"
+													name="payment_method" type="radio"> <label
+													class="form-check-label" for="credit"> クレジットカード </label>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col">払込回数</th>
+									<td><select aria-label="Default select example"
+										class="form-select">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="6">6</option>
+											<option value="12">12</option>
+									</select></td>
+								</tr>
+							</thead>
+						</table>
+						<div class="container">
+							<div class="row">
+								<div class="col text-center pb-3">
+									<button onclick="location.href='203payment.html'" type="button"
+										class="btn btn-primary">次へ</button>
+								</div>
 							</div>
 						</div>
 					</form>
-
-					<div class="container">
-						<div class="row">
-							<div class="col text-center pb-3">
-								<button onclick="location.href='203payment.html'" type="button"
-									class="btn btn-primary">次へ</button>
-							</div>
-						</div>
-					</div>
 				</main>
 			</main>
 		</div>
