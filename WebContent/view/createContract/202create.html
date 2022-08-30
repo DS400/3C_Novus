@@ -184,165 +184,138 @@
       </div>
 
 <form class="row g-3 needs-validation" novalidate>
-  <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">契約始期</label>
-    <input type="date" class="form-control" id="validationCustom01" value="Mark" required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">契約満期</label>
-    <input type="date" class="form-control" id="validationCustom02" value="Otto" required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-6">
-	<div class="form-check form-check-inline">
-	  <input class="form-check-input" type="radio" name="insured_kbn" id="flexRadioDefault1" onclick='showPersonalInfoBar()' checked>
-	  <label class="form-check-label" for="flexRadioDefault1">
-		個人
-	  </label>
+
+<div class="col-12">
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">契約始期</th>
+	  <td><input type="date" class="form-control" id="" ></td>
+	</tr>
+	<tr>
+      <th scope="col">契約満期</th>
+	  <td><input type="date" class="form-control" id="" ></td>
+	</tr>
+	<tr>
+      <th scope="col">被保険者の個人法人区分</th>
+	  <td>
+	  	<div class="col-md-6">
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="insured_kbn" id="flexRadioDefault1" onclick='showPersonalInfoBar()' checked>
+			  <label class="form-check-label" for="flexRadioDefault1">
+				個人
+			  </label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="insured_kbn" onclick='hidePersonalInfoBar()' id="flexRadioDefault2" >
+			  <label class="form-check-label" for="flexRadioDefault2">
+				法人
+			  </label>
+			</div>
+		</div>
+	  </td>
+	</tr>
+	<tr>
+      <th scope="col">氏名-カナ</th>
+	  <td>
+	  	<div class='row'>
+		  	<div class="col-auto"><input type="text" class="form-control" id="" placeholder='タカハシ'></div>
+		  	<div class='col-auto'><input type="text" class="form-control" id="" placeholder='タロウ'></div>
+		  	</div>
+	  </td>
+	</tr>
+		<tr>
+      <th scope="col">氏名-漢字</th>
+	  <td>
+	  	<div class='row'>
+		  	<div class="col-auto"><input type="text" class="form-control" id="" placeholder='髙橋'></div>
+		  	<div class='col-auto'><input type="text" class="form-control" id="" placeholder='太郎'></div>
+		 </div>
+	  </td>
+	</tr>
+	<div id='personal_information'>
+		<tr>
+	      <th scope="col">生年月日</th>
+		  <td><input type="date" class="form-control" id="birthDate" ></td>
+	    </tr>
+		<tr>
+	      <th scope="col">性別</th>
+		  <td>
+		  	<div class="col-md-6">
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="gender" id="gender1" checked>
+			  <label class="form-check-label" for="gender1">
+				男
+			  </label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="gender" id="gender2" >
+			  <label class="form-check-label" for="gender2">
+				女
+			  </label>
+			</div>
+			</div>
+		  </td>
+    </tr>
 	</div>
-	<div class="form-check form-check-inline">
-	  <input class="form-check-input" type="radio" name="insured_kbn" onclick='hidePersonalInfoBar()' id="flexRadioDefault2" >
-	  <label class="form-check-label" for="flexRadioDefault2">
-		法人
-	  </label>
-	</div>
-  </div>
 
-<div id='contract_personal_information'>
-  <div class="col-md-7">
-    <label for="validationCustom03" class="form-label">生年月日</label>
-    <input type="date" class="form-control" id="validationCustom03" required>
-    <div class="invalid-feedback">
-      Please provide a valid city.
-    </div>
-  </div>
-
-
-  <div class="col-md-10">
-	<div class="form-check form-check-inline">
-	  <input class="form-check-input" type="radio" name="sex" id="sex_man" checked>
-	  <label class="form-check-label" for="flexRadioDefault1">
-		男
-	  </label>
-	</div>
-	<div class="form-check form-check-inline">
-	  <input class="form-check-input" type="radio" name="sex" id="sex_woman" >
-	  <label class="form-check-label" for="flexRadioDefault2">
-		女
-	  </label>
-	</div>
-  </div>
-</div>
-<div class='row'>
-  <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">セイ</label>
-    <input type="text" class="form-control" id="validationCustom01" placeholder='タカハシ' required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">メイ</label>
-    <input type="text" class="form-control" id="validationCustom02" placeholder='タロウ' required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4"></div>
+	<tr>
+      <th scope="col">郵便番号</th>
+	  <td><input type="text" class="form-control" id="" placeholder='000-1234'></td>
+    </tr>
+	<tr>
+      <th scope="col">住所-カナ</th>
+	  <td>
+	  	<div class='row'>
+		  	<div class="col-auto"><input type="text" class="form-control" id="" placeholder='トウキョウトタマシツルマキ'></div>
+		  	<div class='col-auto'><input type="text" class="form-control" id="" placeholder='１－１－１　○○ビル'></div>
+		 </div>
+	  </td>
+    </tr>
+	<tr>
+      <th scope="col">住所-漢字</th>
+	  <td>
+	  	<div class='row'>
+		  	<div class="col-auto"><input type="text" class="form-control" id="" placeholder='東京都多摩市鶴牧'></div>
+		  	<div class='col-auto'><input type="text" class="form-control" id="" placeholder='１－１－１　○○ビル'></div>
+		 </div>
+	  </td>
+    </tr>
+     <th scope="col">電話番号</th>
+	  <td><input type="text" class="form-control" id="" placeholder=''></td>
+    </tr>
+	<tr>
+      <th scope="col">携帯電話番号</th>
+	  <td><input type="text" class="form-control" id="" placeholder=''></td>
+    </tr>
+	<tr>
+      <th scope="col">FAX番号</th>
+	  <td><input type="text" class="form-control" id="" placeholder=''></td>
+    </tr>
+  </thead>
 
 
-
-   <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">姓</label>
-    <input type="text" class="form-control" id="validationCustom01" placeholder='髙橋' required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">名</label>
-    <input type="text" class="form-control" id="validationCustom02" placeholder='太郎' required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4"></div>
-</div>
-
-<div class='row'>
-  <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">ジュウショ１</label>
-    <input type="text" class="form-control" id="validationCustom01" placeholder='トウキョウトタマシツルマキ' required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">ジュウショ２</label>
-    <input type="text" class="form-control" id="validationCustom02" placeholder='１－１－１　○○ビル' required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4"></div>
-
-
-
-   <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">住所１</label>
-    <input type="text" class="form-control" id="validationCustom01" placeholder='東京都多摩市鶴牧' required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">住所２</label>
-    <input type="text" class="form-control" id="validationCustom02" placeholder='１－１－１　○○ビル' required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4"></div>
-
-
-</div>
-
-
-
-
-
-
-
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
-  </div>
 </form>
+ <button class="btn btn-primary" type="submit">次へ</button>
 
 
+</div>
 
-	</div>
-
-    </main>
+</main>
   </div>
 </div>
+
 	<script>
 	function showPersonalInfoBar(){
-		$('#contract_personal_information').css('display','block');
+		$('input[name=gender]').attr("disabled",false);
+		$("#birthDate").prop('disabled', false);
 	}
 	function hidePersonalInfoBar(){
-		$('#contract_personal_information').css('display','none');
+		$('input[name=gender]').attr("disabled",true);
+		$("#birthDate").prop('disabled', true);
 	}
 
 	</script>
-
-
-
-
 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
