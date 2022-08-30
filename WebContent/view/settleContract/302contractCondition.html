@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author"
+	content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.101.0">
+<link rel="icon" type="image/png" href="../../static/img/logo.png">
+<link rel="apple-touch-icon" sizes="180x180"
+	href="../../static/img/logo.png">
+<title>contractView-Novus</title>
+
+<link rel="canonical"
+	href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link href="../../static/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+
+.b-example-divider {
+	height: 3rem;
+	background-color: rgba(0, 0, 0, .1);
+	border: solid rgba(0, 0, 0, .15);
+	border-width: 1px 0;
+	box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em
+		rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+	flex-shrink: 0;
+	width: 1.5rem;
+	height: 100vh;
+}
+
+.bi {
+	vertical-align: -.125em;
+	fill: currentColor;
+}
+
+.nav-scroller {
+	position: relative;
+	z-index: 2;
+	height: 2.75rem;
+	overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+	display: flex;
+	flex-wrap: nowrap;
+	padding-bottom: 1rem;
+	margin-top: -1px;
+	overflow-x: auto;
+	text-align: center;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+</style>
+
+
+<!-- Custom styles for this template -->
+<link href="../../static/css/dashboard.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<header
+		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6"
+			href="101index.html">Novus name</a>
+		<button class="navbar-toggler position-absolute d-md-none collapsed"
+			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
+			aria-controls="sidebarMenu" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div id="google_translate_element" class="w-100"></div>
+		<script>
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement({
+					pageLanguage : 'jp'
+				}, 'google_translate_element');
+			}
+		</script>
+
+		<script
+			src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+		<div class="navbar-nav">
+			<div class="nav-item text-nowrap">
+				<a class="nav-link px-3" href="../000usrLogin.html">Sign out</a>
+			</div>
+		</div>
+	</header>
+
+	<div class="container-fluid">
+		<div class="row">
+			<nav id="sidebarMenu"
+				class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+				<div class="position-sticky pt-3 sidebar-sticky">
+					<ul class="nav flex-column">
+						<li class="nav-item"><a class="nav-link" aria-current="page"
+							href="101index.html"> <span data-feather="home"
+								class="align-text-bottom"></span> Top
+						</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="../createContract/201index.html"> <span
+								data-feather="file" class="align-text-bottom"></span> 新規契約
+						</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							href="../settleContract/301index.html"> <span
+								data-feather="shopping-cart" class="align-text-bottom"></span>
+								計上
+						</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="../acceptContract/401index.html"> <span
+								data-feather="users" class="align-text-bottom"></span> 事故受付
+						</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="../cancelContract/501index.html"> <span
+								data-feather="layers" class="align-text-bottom"></span> 解約
+						</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+				<div
+					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h4">計上</h1>
+					<div class="btn-toolbar mb-2 mb-md-0">
+						<div class="btn-group me-2">
+							<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+							<button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+						</div>
+						<button type="button"
+							class="btn btn-sm btn-outline-secondary dropdown-toggle">
+							<span data-feather="calendar" class="align-text-bottom"></span>
+							This week
+						</button>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<button type="button" class="btn btn-primary">トップへ戻る</button>
+				</div>
+
+				<main class="p-3">
+					<ul class="nav nav-tabs">
+						<li class="nav-item"><a href="#tabpage1"
+							class="nav-link active" data-bs-toggle="tab">契約条件</a></li>
+						<li class="nav-item"><a href="#tabpage2" class="nav-link"
+							data-bs-toggle="tab">補償</a></li>
+					</ul>
+					<div class="tab-content">
+						<div id="tabpage1" class="tab-pane active">
+							<table class="table">
+								<tbody>
+									<tr>
+										<td>保険期間</td>
+										<td>平成23年01月01月 午後４時から 平成24年1月1日まで</td>
+									</tr>
+									<tr>
+
+										<td>証券番号</td>
+										<td>00000</td>
+									</tr>
+									<tr>
+
+										<td>印刷番号</td>
+										<td>11111</td>
+									</tr>
+									<tr>
+
+										<td>契約状態</td>
+										<td>契約中</td>
+									</tr>
+									<tr>
+
+										<td>被保険者の個人法人区分</td>
+										<td>個人</td>
+									</tr>
+									<tr>
+
+										<td>払込方法</td>
+										<td>1</td>
+									</tr>
+									<tr>
+
+										<td>氏名ーカナ</td>
+										<td>トウカイタロウ</td>
+									</tr>
+									<tr>
+
+										<td>性別</td>
+										<td>男</td>
+									</tr>
+									<tr>
+
+										<td>氏名ー漢字</td>
+										<td>東海太郎</td>
+									</tr>
+									<tr>
+
+										<td>生年月日</td>
+										<td>1998年10月20日</td>
+									</tr>
+									<tr>
+
+										<td>住所ーカナ</td>
+										<td>トウキョウトタマシ○○チョウ○○バンチ</td>
+									</tr>
+									<tr>
+
+										<td>郵便番号</td>
+										<td>〒○○○ー○○○○</td>
+									</tr>
+									<tr>
+
+										<td>住所ー漢字</td>
+										<td>東京都多摩市○○町○○番地</td>
+									</tr>
+									<tr>
+
+										<td>電話番号</td>
+										<td>123-456-789</td>
+									</tr>
+									<tr>
+
+										<td>携帯電話</td>
+										<td>012-3456-7890</td>
+									</tr>
+									<tr>
+
+										<td>FAX番号</td>
+										<td>987-654-321</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="tabpage2" class="tab-pane">
+							<table class="table">
+								<tr>
+									<td>保険料</td>
+									<td>100,000円</td>
+								</tr>
+								<tr>
+									<td>メーカー</td>
+									<td>TOYOTA</td>
+								</tr>
+								<tr>
+									<td>車名</td>
+									<td>キューブ</td>
+								</tr>
+								<tr>
+									<td>車のナンバー</td>
+									<td>多摩 い 12-34</td>
+								</tr>
+								<tr>
+									<td>車両保険金額</td>
+									<td>300,000円</td>
+								</tr>
+								<tr>
+									<td>免許証の色</td>
+									<td>ブルー</td>
+								</tr>
+								<tr>
+									<td>車両料率</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>対人料率</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>対物料率</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>障害両立</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>年齢条件</td>
+									<td>無制限</td>
+								</tr>
+								<tr>
+									<td>一回分保険料</td>
+									<td>10,000円</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</main>
+				<div class="container-fluid">
+					<button type="button" class="btn btn-primary">代理店計上</button>
+				</div>
+		<script type="text/javascript">
+			// ---------------------------
+			// ▼A：対象要素を得る
+			// ---------------------------
+			var tabs = document.getElementById('tabcontrol')
+					.getElementsByTagName('a');
+			var pages = document.getElementById('tabbody')
+					.getElementsByTagName('div');
+
+			// ---------------------------
+			// ▼B：タブの切り替え処理
+			// ---------------------------
+			function changeTab() {
+				// ▼B-1. href属性値から対象のid名を抜き出す
+				var targetid = this.href.substring(this.href.indexOf('#') + 1,
+						this.href.length);
+
+				// ▼B-2. 指定のタブページだけを表示する
+				for (var i = 0; i < pages.length; i++) {
+					if (pages[i].id != targetid) {
+						pages[i].style.display = "none";
+					} else {
+						pages[i].style.display = "block";
+					}
+				}
+
+				// ▼B-3. クリックされたタブを前面に表示する
+				for (var i = 0; i < tabs.length; i++) {
+					tabs[i].style.zIndex = "0";
+				}
+				this.style.zIndex = "10";
+
+				// ▼B-4. ページ遷移しないようにfalseを返す
+				return false;
+			}
+
+			// ---------------------------
+			// ▼C：すべてのタブに対して、クリック時にchangeTab関数が実行されるよう指定する
+			// ---------------------------
+			for (var i = 0; i < tabs.length; i++) {
+				tabs[i].onclick = changeTab;
+			}
+
+			// ---------------------------
+			// ▼D：最初は先頭のタブを選択しておく
+			// ---------------------------
+			tabs[0].onclick();
+		</script>
+
+
+
+
+		</main>
+	</div>
+	</div>
+	<script>
+		function showPersonalInfoBar() {
+			$('#contract_personal_information').css('display', 'block');
+		}
+		function hidePersonalInfoBar() {
+			$('#contract_personal_information').css('display', 'none');
+		}
+	</script>
+
+
+
+
+
+
+	<script src="../../static/js/bootstrap.bundle.min.js"></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+		integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+		integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+		crossorigin="anonymous"></script>
+	<script src="../../static/js/dashboard.js"></script>
+</body>
+</html>
