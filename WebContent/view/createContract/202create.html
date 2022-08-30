@@ -316,6 +316,45 @@
 									<td><input type="text" class="form-control" id=""
 										placeholder=''></td>
 								</tr>
+								<tr>
+									<th scope="col">振込方法</th>
+									<td>
+											<div class="col-md-6">
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="payment_method"
+														id="direct" checked> <label
+														class="form-check-label" for="direct"> 直接集金 </label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="payment_method"
+														id="transfer"> <label class="form-check-label"
+														for="transfer"> 口座振替 </label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="payment_method"
+														id="credit"> <label class="form-check-label"
+														for="credit"> クレジットカード </label>
+												</div>
+											</div>
+										</td>
+								</tr>
+								<tr>
+									<th scope="col">払込回数</th>
+									<td>
+											<select class="form-select" aria-label="Default select example">
+											  <option value="1">1</option>
+											  <option value="2">2</option>
+											  <option value="3">3</option>
+											  <option value="4">4</option>
+											  <option value="6">6</option>
+											  <option value="12">12</option>
+											</select>
+										</td>
+								</tr>
+
+
+
+
 							</thead>
 							</table>
 
