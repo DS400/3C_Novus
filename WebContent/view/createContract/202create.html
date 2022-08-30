@@ -14,7 +14,8 @@
 <link rel="canonical"
 	href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
 
-
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
 
@@ -356,6 +357,18 @@
 		</div>
 	</div>
 
+							<script>
+								function showPersonalInfoBar() {
+									$('input[name=gender]').attr("disabled",
+											false);
+									$("#birthDate").prop('disabled', false);
+								}
+								function hidePersonalInfoBar() {
+									$('input[name=gender]').attr("disabled",
+											true);
+									$("#birthDate").prop('disabled', true);
+								}
+							</script>
 
 	<script src="../../static/js/bootstrap.bundle.min.js"></script>
 
