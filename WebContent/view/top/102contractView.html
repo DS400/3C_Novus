@@ -14,10 +14,6 @@
 <link rel="canonical"
 	href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
 
-
-
-
-
 <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
@@ -144,14 +140,14 @@
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div
 					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">契約内容照会</h1>
+					<h1 class="h2">【照会】契約条件・補償</h1>
 				</div>
 
 				<form class="row g-3 needs-validation" novalidate>
 
-					<div class="container-fluid">
-						<button type="button" class="btn btn-primary">トップへ戻る</button>
-						<div></div>
+					<div class="col-12">
+						<button type="button" class="btn btn-primary"
+							onclick="location.href='101index.html'">トップへ戻る</button>
 					</div>
 
 					<main class="p-3">
@@ -167,7 +163,6 @@
 							<div class="tab-content">
 								<div id="contract" class="tab-pane active">
 									<table class="table table-striped">
-										<h2>契約内容照会</h2>
 										<thead>
 											<tr>
 												<th scope="col">保険期間</th>
@@ -218,7 +213,7 @@
 											</tr>
 											<tr>
 												<th scope="col">郵便番号</th>
-												<td>〒○○○-○○○○</td>
+												<td>〒○○○○○○○</td>
 											</tr>
 											<tr>
 												<th scope="col">電話番号</th>
@@ -245,7 +240,6 @@
 
 								<div id="compensation" class="tab-pane">
 									<table class="table table-striped">
-										<h2>補償</h2>
 										<thead>
 											<tr>
 												<th colspan="2">自動車保険料試算結果</th>
@@ -287,7 +281,7 @@
 												<td>３</td>
 											</tr>
 											<tr>
-												<th>障害料率</th>
+												<th>傷害料率</th>
 												<td>２</td>
 											</tr>
 											<tr>

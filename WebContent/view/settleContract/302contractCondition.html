@@ -144,21 +144,11 @@
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div
 					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h4">計上</h1>
-					<div class="btn-toolbar mb-2 mb-md-0">
-						<div class="btn-group me-2">
-							<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-							<button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-						</div>
-						<button type="button"
-							class="btn btn-sm btn-outline-secondary dropdown-toggle">
-							<span data-feather="calendar" class="align-text-bottom"></span>
-							This week
-						</button>
-					</div>
+					<h1 class="h2">【計上】契約条件・補償</h1>
 				</div>
 				<div class="container-fluid">
-					<button type="button" class="btn btn-primary">トップへ戻る</button>
+					<button type="button" class="btn btn-primary"
+						onclick="location.href='301index.html'">トップへ戻る</button>
 				</div>
 
 				<main class="p-3">
@@ -308,63 +298,68 @@
 						</div>
 					</div>
 				</main>
-				<div class="container-fluid">
-					<button type="button" class="btn btn-primary">代理店計上</button>
+				<div class="container">
+					<div class="row">
+						<div class="col text-center pb-3">
+							<button type="button" class="btn btn-primary"
+								onclick="location.href='303contractCompensation.html'">代理店計上</button>
+						</div>
+					</div>
 				</div>
-		<script type="text/javascript">
-			// ---------------------------
-			// ▼A：対象要素を得る
-			// ---------------------------
-			var tabs = document.getElementById('tabcontrol')
-					.getElementsByTagName('a');
-			var pages = document.getElementById('tabbody')
-					.getElementsByTagName('div');
+				<script type="text/javascript">
+					// ---------------------------
+					// ▼A：対象要素を得る
+					// ---------------------------
+					var tabs = document.getElementById('tabcontrol')
+							.getElementsByTagName('a');
+					var pages = document.getElementById('tabbody')
+							.getElementsByTagName('div');
 
-			// ---------------------------
-			// ▼B：タブの切り替え処理
-			// ---------------------------
-			function changeTab() {
-				// ▼B-1. href属性値から対象のid名を抜き出す
-				var targetid = this.href.substring(this.href.indexOf('#') + 1,
-						this.href.length);
+					// ---------------------------
+					// ▼B：タブの切り替え処理
+					// ---------------------------
+					function changeTab() {
+						// ▼B-1. href属性値から対象のid名を抜き出す
+						var targetid = this.href.substring(this.href
+								.indexOf('#') + 1, this.href.length);
 
-				// ▼B-2. 指定のタブページだけを表示する
-				for (var i = 0; i < pages.length; i++) {
-					if (pages[i].id != targetid) {
-						pages[i].style.display = "none";
-					} else {
-						pages[i].style.display = "block";
+						// ▼B-2. 指定のタブページだけを表示する
+						for (var i = 0; i < pages.length; i++) {
+							if (pages[i].id != targetid) {
+								pages[i].style.display = "none";
+							} else {
+								pages[i].style.display = "block";
+							}
+						}
+
+						// ▼B-3. クリックされたタブを前面に表示する
+						for (var i = 0; i < tabs.length; i++) {
+							tabs[i].style.zIndex = "0";
+						}
+						this.style.zIndex = "10";
+
+						// ▼B-4. ページ遷移しないようにfalseを返す
+						return false;
 					}
-				}
 
-				// ▼B-3. クリックされたタブを前面に表示する
-				for (var i = 0; i < tabs.length; i++) {
-					tabs[i].style.zIndex = "0";
-				}
-				this.style.zIndex = "10";
+					// ---------------------------
+					// ▼C：すべてのタブに対して、クリック時にchangeTab関数が実行されるよう指定する
+					// ---------------------------
+					for (var i = 0; i < tabs.length; i++) {
+						tabs[i].onclick = changeTab;
+					}
 
-				// ▼B-4. ページ遷移しないようにfalseを返す
-				return false;
-			}
-
-			// ---------------------------
-			// ▼C：すべてのタブに対して、クリック時にchangeTab関数が実行されるよう指定する
-			// ---------------------------
-			for (var i = 0; i < tabs.length; i++) {
-				tabs[i].onclick = changeTab;
-			}
-
-			// ---------------------------
-			// ▼D：最初は先頭のタブを選択しておく
-			// ---------------------------
-			tabs[0].onclick();
-		</script>
+					// ---------------------------
+					// ▼D：最初は先頭のタブを選択しておく
+					// ---------------------------
+					tabs[0].onclick();
+				</script>
 
 
 
 
-		</main>
-	</div>
+			</main>
+		</div>
 	</div>
 	<script>
 		function showPersonalInfoBar() {

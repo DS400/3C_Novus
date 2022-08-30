@@ -10,12 +10,14 @@
 <link rel="icon" type="image/png" href="../../static/img/logo.png">
 <link rel="apple-touch-icon" sizes="180x180"
 	href="../../static/img/logo.png">
-<title>contractView-Novus</title>
-
+<title>Top-Novus</title>
 <link rel="canonical"
 	href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+
+
 
 <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
 
@@ -82,7 +84,7 @@
 	<header
 		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
 		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6"
-			href="101index.html">Novus name</a>
+			href="../top/101index.html">Novus</a>
 		<button class="navbar-toggler position-absolute d-md-none collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
@@ -115,113 +117,171 @@
 				class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
 				<div class="position-sticky pt-3 sidebar-sticky">
 					<ul class="nav flex-column">
-						<li class="nav-item"><a class="nav-link active" aria-current="page"
-							href="101index.html"> <span data-feather="home"
+						<li class="nav-item"><a class="nav-link" aria-current="page"
+							href="../top/101index.html"> <span data-feather="home"
 								class="align-text-bottom"></span> Top
 						</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="../createContract/201index.html"> <span data-feather="file"
-								class="align-text-bottom"></span> 新規契約
+						<li class="nav-item"><a class="nav-link active"
+							href="../createContract/201index.html"> <span
+								data-feather="file" class="align-text-bottom"></span> 新規契約
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="../settleContract/301index.html">
-								<span data-feather="shopping-cart" class="align-text-bottom"></span>
+						<li class="nav-item"><a class="nav-link "
+							href="../settleContract/301index.html"> <span
+								data-feather="shopping-cart" class="align-text-bottom"></span>
 								計上
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="../acceptContract/401index.html">
-								<span data-feather="users" class="align-text-bottom"></span>
-								事故受付
+						<li class="nav-item"><a class="nav-link"
+							href="../acceptContract/401index.html"> <span
+								data-feather="users" class="align-text-bottom"></span> 事故受付
 						</a></li>
-
-						<li class="nav-item"><a class="nav-link" href="../cancelContract/501index.html">
-								<span data-feather="layers" class="align-text-bottom"></span> 解約
+						<li class="nav-item"><a class="nav-link"
+							href="../cancelContract/501index.html"> <span
+								data-feather="layers" class="align-text-bottom"></span> 解約
 						</a></li>
 					</ul>
-
-
 				</div>
 			</nav>
 
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div
 					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">契約内容照会</h1>
+					<h1 class="h2">【新規】申込書印刷確認</h1>
 				</div>
 
 				<form class="row g-3 needs-validation" novalidate>
 
 					<div class="col-12">
-						<button class="btn btn-primary" type="submit" onclick="location.href='101index.html'">トップへ戻る</button>
+						<button class="btn btn-primary" type="submit"
+							onclick="location.href='101index.html'">トップへ戻る</button>
 					</div>
 
 					<ul class="nav nav-tabs">
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="#">契約情報</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">補償</a></li>
+							data-bs-toggle="tab" href="#tabpage1">契約情報</a></li>
+						<li class="nav-item"><a class="nav-link" href="#tabpage2"
+							data-bs-toggle="tab">補償</a></li>
 					</ul>
+					<div class="tab-content">
+						<div id="tabpage1" class="tab-pane active">
 
-
-					<table class="table">
-						<thead>
-							<tr>
-								<th scope="col">保険期間</th>
-								<td>平成23年01月01日午後4時から平成24年01月01日まで</td>
-							</tr>
-							<tr>
-								<th scope="col">契約状態</th>
-								<td>契約中</td>
-							</tr>
-							<tr>
-								<th scope="col">被保険者の個人法人区分</th>
-								<td>個人</td>
-							</tr>
-							<tr>
-								<th scope="col">払込方法</th>
-								<td>口座振替</td>
-							</tr>
-							<tr>
-								<th scope="col">払込回数</th>
-								<td>1</td>
-							</tr>
-							<tr>
-								<th scope="col">氏名-カナ</th>
-								<td>トウカイタロウ</td>
-							</tr>
-							<tr>
-								<th scope="col">生年月日</th>
-								<td>1998年10月20日</td>
-							</tr>
-							<tr>
-								<th scope="col">住所-カナ</th>
-								<td>トウキョウトタマシ○○チョウ○○バンチ</td>
-							</tr>
-							<tr>
-								<th scope="col">郵便番号</th>
-								<td>〒○○○-○○○</td>
-							</tr>
-							<tr>
-								<th scope="col">住所-漢字</th>
-								<td>東京都多摩市○○町○○番地</td>
-							</tr>
-							<tr>
-								<th scope="col">電話番号</th>
-								<td>123-456-789</td>
-							</tr>
-							<tr>
-								<th scope="col">携帯電話番号</th>
-								<td>012-456-7890</td>
-							</tr>
-							<tr>
-								<th scope="col">FAX番号</th>
-								<td>987-654-321</td>
-							</tr>
-						</thead>
-					</table>
+							<table class="table">
+								<thead>
+									<tr>
+										<th scope="col">保険期間</th>
+										<td>平成23年01月01日午後4時から平成24年01月01日まで</td>
+									</tr>
+									<tr>
+										<th scope="col">契約状態</th>
+										<td>契約中</td>
+									</tr>
+									<tr>
+										<th scope="col">被保険者の個人法人区分</th>
+										<td>個人</td>
+									</tr>
+									<tr>
+										<th scope="col">払込方法</th>
+										<td>口座振替</td>
+									</tr>
+									<tr>
+										<th scope="col">払込回数</th>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="col">氏名-カナ</th>
+										<td>トウカイタロウ</td>
+									</tr>
+									<tr>
+										<th scope="col">生年月日</th>
+										<td>1998年10月20日</td>
+									</tr>
+									<tr>
+										<th scope="col">住所-カナ</th>
+										<td>トウキョウトタマシ○○チョウ○○バンチ</td>
+									</tr>
+									<tr>
+										<th scope="col">郵便番号</th>
+										<td>〒○○○○○○○</td>
+									</tr>
+									<tr>
+										<th scope="col">住所-漢字</th>
+										<td>東京都多摩市○○町○○番地</td>
+									</tr>
+									<tr>
+										<th scope="col">電話番号</th>
+										<td>123-456-789</td>
+									</tr>
+									<tr>
+										<th scope="col">携帯電話番号</th>
+										<td>012-456-7890</td>
+									</tr>
+									<tr>
+										<th scope="col">FAX番号</th>
+										<td>987-654-321</td>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div id="tabpage2" class="tab-pane">
+							<table class="table">
+								<tr>
+									<td>保険料</td>
+									<td>100,000円</td>
+								</tr>
+								<tr>
+									<td>メーカー</td>
+									<td>TOYOTA</td>
+								</tr>
+								<tr>
+									<td>車名</td>
+									<td>キューブ</td>
+								</tr>
+								<tr>
+									<td>車のナンバー</td>
+									<td>多摩 い 12-34</td>
+								</tr>
+								<tr>
+									<td>車両保険金額</td>
+									<td>300,000円</td>
+								</tr>
+								<tr>
+									<td>免許証の色</td>
+									<td>ブルー</td>
+								</tr>
+								<tr>
+									<td>車両料率</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>対人料率</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>対物料率</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>障害両立</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>年齢条件</td>
+									<td>無制限</td>
+								</tr>
+								<tr>
+									<td>一回分保険料</td>
+									<td>10,000円</td>
+								</tr>
+							</table>
+						</div>
+					</div>
 				</form>
 				<div class="container">
 					<div class="row">
-						<div class="col text-center">
-							<button class="btn btn-primary" type="submit">前画面へ戻る</button>
-							<button onclick="location.href='205result.html'" type="button" class="btn btn-success">印刷</button>
+						<div class="col text-center pb-3">
+							<button class="btn btn-primary" type="submit"
+								onclick="location.href='203payment.html'">前画面へ戻る</button>
+							<button onclick="location.href='205result.html'" type="button"
+								class="btn btn-success">印刷</button>
 						</div>
 					</div>
 				</div>
@@ -230,7 +290,7 @@
 	</div>
 
 
-	<script src="../../staic/js/bootstrap.bundle.min.js"></script>
+	<script src="../../static/js/bootstrap.bundle.min.js"></script>
 
 	<script
 		src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"

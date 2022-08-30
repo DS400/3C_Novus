@@ -7,12 +7,14 @@
 <meta name="author"
 	content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.101.0">
-<title>Dashboard Template · Bootstrap v5.2</title>
-
+<link rel="icon" type="image/png" href="../../static/img/logo.png">
+<link rel="apple-touch-icon" sizes="180x180"
+	href="../../static/img/logo.png">
+<title>Top-Novus</title>
 <link rel="canonical"
 	href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
 
 
 
@@ -81,19 +83,30 @@
 
 	<header
 		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Company
-			name</a>
+		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6"
+			href="../top/101index.html">Novus</a>
 		<button class="navbar-toggler position-absolute d-md-none collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<input class="form-control form-control-dark w-100 rounded-0 border-0"
-			type="text" placeholder="Search" aria-label="Search">
+
+		<div id="google_translate_element" class="w-100"></div>
+		<script>
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement({
+					pageLanguage : 'jp'
+				}, 'google_translate_element');
+			}
+		</script>
+
+		<script
+			src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 		<div class="navbar-nav">
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="#">Sign out</a>
+				<a class="nav-link px-3" href="../000usrLogin.html">Sign out</a>
 			</div>
 		</div>
 	</header>
@@ -105,57 +118,25 @@
 				<div class="position-sticky pt-3 sidebar-sticky">
 					<ul class="nav flex-column">
 						<li class="nav-item"><a class="nav-link" aria-current="page"
-							href="index.html"> <span data-feather="home"
+							href="../top/101index.html"> <span data-feather="home"
 								class="align-text-bottom"></span> Top
 						</a></li>
 						<li class="nav-item"><a class="nav-link active"
-							href="shinki.html"> <span data-feather="file"
-								class="align-text-bottom"></span> 新規契約
+							href="../createContract/201index.html"> <span
+								data-feather="file" class="align-text-bottom"></span> 新規契約
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="keijou.html">
-								<span data-feather="shopping-cart" class="align-text-bottom"></span>
+						<li class="nav-item"><a class="nav-link "
+							href="../settleContract/301index.html"> <span
+								data-feather="shopping-cart" class="align-text-bottom"></span>
 								計上
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="uketuke.html">
-								<span data-feather="users" class="align-text-bottom"></span>
-								事故受付
+						<li class="nav-item"><a class="nav-link"
+							href="../acceptContract/401index.html"> <span
+								data-feather="users" class="align-text-bottom"></span> 事故受付
 						</a></li>
-						<!--
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2" class="align-text-bottom"></span>
-
-            </a>
-			-->
-						</li>
-						<li class="nav-item"><a class="nav-link" href="kaiyaku.html">
-								<span data-feather="layers" class="align-text-bottom"></span> 解約
-						</a></li>
-					</ul>
-
-					<h6
-						class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-						<span>Saved reports</span> <a class="link-secondary" href="#"
-							aria-label="Add a new report"> <span
-							data-feather="plus-circle" class="align-text-bottom"></span>
-						</a>
-					</h6>
-					<ul class="nav flex-column mb-2">
-						<li class="nav-item"><a class="nav-link" href="#"> <span
-								data-feather="file-text" class="align-text-bottom"></span>
-								Current month
-						</a></li>
-						<li class="nav-item"><a class="nav-link" href="#"> <span
-								data-feather="file-text" class="align-text-bottom"></span> Last
-								quarter
-						</a></li>
-						<li class="nav-item"><a class="nav-link" href="#"> <span
-								data-feather="file-text" class="align-text-bottom"></span>
-								Social engagement
-						</a></li>
-						<li class="nav-item"><a class="nav-link" href="#"> <span
-								data-feather="file-text" class="align-text-bottom"></span>
-								Year-end sale
+						<li class="nav-item"><a class="nav-link"
+							href="../cancelContract/501index.html"> <span
+								data-feather="layers" class="align-text-bottom"></span> 解約
 						</a></li>
 					</ul>
 				</div>
@@ -164,18 +145,8 @@
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div
 					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">新規契約</h1>
-					<div class="btn-toolbar mb-2 mb-md-0">
-						<div class="btn-group me-2">
-							<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-							<button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-						</div>
-						<button type="button"
-							class="btn btn-sm btn-outline-secondary dropdown-toggle">
-							<span data-feather="calendar" class="align-text-bottom"></span>
-							This week
-						</button>
-					</div>
+					<h1 class="h2">【新規】契約条件</h1>
+
 				</div>
 
 				<form class="row g-3 needs-validation" novalidate>
@@ -270,7 +241,7 @@
 								<tr>
 									<th scope="col">郵便番号</th>
 									<td><input type="text" class="form-control" id=""
-										placeholder='000-1234'></td>
+										placeholder='0001234'></td>
 								</tr>
 								<tr>
 									<th scope="col">住所-カナ</th>
@@ -304,101 +275,95 @@
 								</tr>
 								<th scope="col">電話番号</th>
 								<td><input type="text" class="form-control" id=""
-									placeholder=''></td>
+									placeholder='011-000-0000'></td>
 								</tr>
 								<tr>
 									<th scope="col">携帯電話番号</th>
 									<td><input type="text" class="form-control" id=""
-										placeholder=''></td>
+										placeholder='080-0000-0000'></td>
 								</tr>
 								<tr>
 									<th scope="col">FAX番号</th>
 									<td><input type="text" class="form-control" id=""
-										placeholder=''></td>
+										placeholder='000-0000-0000'></td>
 								</tr>
 								<tr>
 									<th scope="col">振込方法</th>
 									<td>
-											<div class="col-md-6">
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="payment_method"
-														id="direct" checked> <label
-														class="form-check-label" for="direct"> 直接集金 </label>
-												</div>
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="payment_method"
-														id="transfer"> <label class="form-check-label"
-														for="transfer"> 口座振替 </label>
-												</div>
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="payment_method"
-														id="credit"> <label class="form-check-label"
-														for="credit"> クレジットカード </label>
-												</div>
+										<div class="col-md-6">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio"
+													name="payment_method" id="direct" checked> <label
+													class="form-check-label" for="direct"> 直接集金 </label>
 											</div>
-										</td>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio"
+													name="payment_method" id="transfer"> <label
+													class="form-check-label" for="transfer"> 口座振替 </label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio"
+													name="payment_method" id="credit"> <label
+													class="form-check-label" for="credit"> クレジットカード </label>
+											</div>
+										</div>
+									</td>
 								</tr>
 								<tr>
 									<th scope="col">払込回数</th>
-									<td>
-											<select class="form-select" aria-label="Default select example">
-											  <option value="1">1</option>
-											  <option value="2">2</option>
-											  <option value="3">3</option>
-											  <option value="4">4</option>
-											  <option value="6">6</option>
-											  <option value="12">12</option>
-											</select>
-										</td>
+									<td><select class="form-select"
+										aria-label="Default select example">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="6">6</option>
+											<option value="12">12</option>
+									</select></td>
 								</tr>
 
 
 
 
 							</thead>
-							</table>
+						</table>
+					</div>
+				</form>
+
+				<div class="container">
+					<div class="row">
+						<div class="col text-center pb-3">
+							<button onclick="location.href='203payment.html'" type="button"
+								class="btn btn-primary">次へ</button>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+
+	<script>
+		function showPersonalInfoBar() {
+			$('input[name=gender]').attr("disabled", false);
+			$("#birthDate").prop('disabled', false);
+		}
+		function hidePersonalInfoBar() {
+			$('input[name=gender]').attr("disabled", true);
+			$("#birthDate").prop('disabled', true);
+		}
+	</script>
 
 
-							</form>
+	<script src="../../static/js/bootstrap.bundle.min.js"></script>
 
-							<div class="container">
-								<div class="row">
-									<div class="col text-center">
-										<button onclick="location.href='203payment.html'" type="button" class="btn btn-primary">次へ</button>
-									</div>
-								</div>
-							</div>
-
-							</div>
-
-							</main>
-							</div>
-							</div>
-
-							<script>
-								function showPersonalInfoBar() {
-									$('input[name=gender]').attr("disabled",
-											false);
-									$("#birthDate").prop('disabled', false);
-								}
-								function hidePersonalInfoBar() {
-									$('input[name=gender]').attr("disabled",
-											true);
-									$("#birthDate").prop('disabled', true);
-								}
-							</script>
-
-
-								<script src="../../static/js/bootstrap.bundle.min.js"></script>
-								<script src="../../static/js/dashboard.js"></script>
-
-							<script
-								src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-								integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-								crossorigin="anonymous"></script>
-							<script
-								src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-								integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-								crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+		integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+		integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+		crossorigin="anonymous"></script>
+	<script src="../../static/js/dashboard.js"></script>
 </body>
 </html>
